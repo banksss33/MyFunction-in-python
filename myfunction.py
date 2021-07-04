@@ -37,14 +37,16 @@ def Fibo(Seq): #Output Fibo seq
 def findfibo(inp): #to find is number in fibo seq
     Fibonacci = [1,1]
     index = 0
-    while Fibonacci[index+1] <= inp: #loop until number in index >= input
+    while Fibonacci[index+1] < inp: #loop until number in index >= input
         Fibonacci.append(Fibonacci[index] + Fibonacci[index+1]) 
         index +=1
-    try:
-        Fibonacci.index(inp) #if that number is in Fibonacci(list)
-        print("Your number is Fibo!")
-    except: #if number is not in list the program will error and run except
-        print("Your number is not Fibo!")
+    Fibonacci.reverse()
+    if Fibonacci[0] == inp:
+        print("%i is in fibo" %inp)
+        return True
+    else:
+        print("%i is not in fibo" %inp)
+        return False
 
 def Factorial(n): #Factorial
     if n==1 and n>=0:
