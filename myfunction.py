@@ -1,4 +1,4 @@
-def Getmax(): #Getmax number that user enter
+def getmax(): #Getmax number that user enter
     Numberlist = []
     Number = 0
     index = 0
@@ -24,7 +24,7 @@ def randomnumlist(length): #random number in list
         count+=1
     return numberlist
 
-def Fibo(Seq): #Output Fibo seq
+def fibo(Seq): #Output Fibo seq
     Fibonacci = [1,1]
     count = 0
     index = 0
@@ -42,13 +42,11 @@ def findfibo(inp): #to find is number in fibo seq
         index +=1
     Fibonacci.reverse()
     if Fibonacci[0] == inp:
-        print("%i is in fibo" %inp)
         return True
     else:
-        print("%i is not in fibo" %inp)
         return False
 
-def Factorial(n): #Factorial
+def factorial(n): #Factorial
     if n==1 and n>=0:
         return 1
     else:
